@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPATA - Newsletter</title>
+    <link rel="icon" href="img/EPATA.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="img/Epata.png" alt="EPATA" class="logo"></a>
+        <button class="menu-toggle">☰</button>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="newsletter.html" class="active">Newsletter</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text"><br><br><br><br>
+            <h2>Assine Nossa Newsletter</h2>
+            <p>Receba as últimas novidades, dicas e atualizações diretamente no seu e-mail.</p>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Cadastre-se</h2>
+        <form id="newsletter-form">
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            <button type="submit" class="btn">Assinar</button>
+        </form>
+    </section>
+
+    <section class="news">
+        <h2>Últimas Notícias</h2>
+        <div class="news-container">
+            <div class="news-item">
+                <img src="img/imovacao.png" alt="Notícia 1">
+                <h3>Inovação Tecnológica</h3>
+                <p>Descubra como a tecnologia está transformando o mercado.</p>
+                <a href="noticia.html?titulo=Inovação Tecnológica
+                        &subtitulo=O impacto da tecnologia no mercado global.
+                        &autor=Ana Silva&data=10/02/2025&visualizacoes=230
+                        &imagem=img/imovacao.png
+                        &conteudo=Descubra como a inovação tecnológica está transformando diversos setores, desde a indústria até o mercado financeiro. As novas tendências digitais estão impulsionando o crescimento das empresas e trazendo novas oportunidades de negócios."
+                    class="btn">
+                    <i class="fas fa-book-open"></i> Leia mais
+                </a>
+            </div>
+            <div class="news-item">
+                <img src="img/projectos (1).jpeg" alt="Notícia 2">
+                <h3>Novos Projetos</h3>
+                <p>Confira os últimos projetos desenvolvidos pela nossa equipe.</p>
+                <a href="noticia.html?titulo=Novos Projetos
+                        &subtitulo=As tendências de inovação e crescimento no mercado.
+                        &autor=Paulo Fernandes&data=15/02/2025&visualizacoes=180
+                        &imagem=img/projectos (1).jpeg
+                        &conteudo=O setor de tecnologia continua evoluindo rapidamente, e novas startups estão surgindo com soluções inovadoras para diversos problemas do mercado. Neste artigo, exploramos como as novas tendências e investimentos estão impactando o futuro dos negócios."
+                    class="btn">
+                    <i class="fas fa-book-open"></i> Leia mais
+                </a>
+            </div>
+            <div class="news-item">
+                <img src="img/mercado-digital-02 (1).png" alt="Notícia 3">
+                <h3>Mercado Digital</h3>
+                <p>Entenda as tendências e oportunidades do marketing digital.</p>
+                <a href="noticia.html?titulo=Mercado Digital
+                        &subtitulo=A transformação digital e o impacto no comércio eletrônico.
+                        &autor=Maria Oliveira&data=18/02/2025&visualizacoes=250
+                        &imagem=img/mercado-digital-02 (1).png
+                        &conteudo=O comércio digital cresceu significativamente nos últimos anos, impulsionado pela tecnologia e mudanças nos hábitos de consumo. Entenda como o e-commerce e o marketing digital estão moldando o futuro das vendas online."
+                    class="btn">
+                    <i class="fas fa-book-open"></i> Leia mais
+                </a>
+            </div>  
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Seção de Redes Sociais -->
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <a href="https://facebook.com/epata" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/epata" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/epata" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/244923724469" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+    
+            <!-- Seção de Inscrição para Formação -->
+            <div class="footer-formacao">
+                <h3>Inscreva-se na nossa Formação</h3>
+                <p>Receba informações sobre nossos cursos diretamente no seu e-mail.</p>
+                <form id="form-inscricao">
+                    <input type="text" id="nome" placeholder="Seu Nome" required>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <button type="submit">Inscrever-se</button>
+                </form>
+            </div>
+    
+            <!-- Links Úteis -->
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 EPATA - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById("form-inscricao").addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        Swal.fire({
+            title: "Inscrição Confirmada!",
+            text: "Você receberá nossas atualizações em breve.",
+            icon: "success",
+            confirmButtonText: "OK"
+        });
+
+        document.getElementById("nome").value = "";
+        document.getElementById("email").value = "";
+    });
+</script>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            Swal.fire({
+                icon: "success",
+                title: "Inscrição realizada!",
+                text: "Você foi cadastrado com sucesso na nossa newsletter.",
+                confirmButtonText: "OK",
+                confirmButtonColor: "#3085d6"
+            });
+        });
+    </script>
+</body>
+</html>

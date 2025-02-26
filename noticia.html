@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/EPATA.ico" type="image/x-icon">
+    <title>Notícia Completa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="img/Epata.png" alt="EPATA" class="logo"></a>
+        <button class="menu-toggle">☰</button>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="newsletter.html" class="active">Newsletter</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="noticia-container"><br><br><br><br>
+        <h1 id="noticia-titulo"></h1>
+        <h3 id="noticia-subtitulo"></h3>
+        
+        <div class="noticia-info">
+            <p><i class="fas fa-user"></i> <strong>Por:</strong> <span id="noticia-autor"></span></p>
+            <p><i class="fas fa-calendar-alt"></i> <strong>Data:</strong> <span id="noticia-data"></span></p>
+            <p><i class="fas fa-eye"></i> <strong>Visualizações:</strong> <span id="noticia-visualizacoes"></span></p>
+        </div>
+
+        <img id="noticia-imagem" src="" alt="Imagem da Notícia">
+        
+        <p id="noticia-conteudo"></p>
+
+        <div class="compartilhar">
+            <p><i class="fas fa-share-alt"></i> Compartilhar:</p>
+            <a id="share-facebook" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a id="share-whatsapp" href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a id="share-twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <a href="newsletter.html" class="btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Seção de Redes Sociais -->
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <a href="https://facebook.com/epata" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/epata" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/epata" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/244923724469" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+    
+            <!-- Seção de Inscrição para Formação -->
+            <div class="footer-formacao">
+                <h3>Inscreva-se na nossa Formação</h3>
+                <p>Receba informações sobre nossos cursos diretamente no seu e-mail.</p>
+                <form id="form-inscricao">
+                    <input type="text" id="nome" placeholder="Seu Nome" required>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <button type="submit">Inscrever-se</button>
+                </form>
+            </div>
+    
+            <!-- Links Úteis -->
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 EPATA - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById("form-inscricao").addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        Swal.fire({
+            title: "Inscrição Confirmada!",
+            text: "Você receberá nossas atualizações em breve.",
+            icon: "success",
+            confirmButtonText: "OK"
+        });
+
+        document.getElementById("nome").value = "";
+        document.getElementById("email").value = "";
+    });
+</script>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("noticia-titulo").innerText = params.get("titulo");
+            document.getElementById("noticia-subtitulo").innerText = params.get("subtitulo");
+            document.getElementById("noticia-autor").innerText = params.get("autor");
+            document.getElementById("noticia-data").innerText = params.get("data");
+            document.getElementById("noticia-visualizacoes").innerText = params.get("visualizacoes") || "0";
+            document.getElementById("noticia-imagem").src = params.get("imagem");
+            document.getElementById("noticia-conteudo").innerText = params.get("conteudo");
+
+            // Criando links para compartilhar a notícia
+            const urlAtual = window.location.href;
+            document.getElementById("share-facebook").href = `https://www.facebook.com/sharer/sharer.php?u=${urlAtual}`;
+            document.getElementById("share-whatsapp").href = `https://api.whatsapp.com/send?text=Confira esta notícia: ${urlAtual}`;
+            document.getElementById("share-twitter").href = `https://twitter.com/intent/tweet?url=${urlAtual}&text=Confira esta notícia!`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPATA - Contato</title>
+    <link rel="icon" href="img/EPATA.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="home.html">
+            <img src="img/Epata.png" alt="EPATA" class="logo">
+        </a>
+        <button class="menu-toggle">☰</button>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text"><br><br><br><br>
+            <h2>Entre em Contato</h2>
+            <p>Estamos prontos para atender você! Envie sua mensagem e responderemos o mais breve possível.</p>
+        </div>
+        <div class="hero-image">
+            <img src="img/contato.png" alt="Entre em contato">
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h2>Fale Conosco</h2>
+        <form action="#" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <section class="contact-info">
+        <h2>Informações de Contato</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Luanda, Angola</p>
+        <p><i class="fas fa-envelope"></i> Email: contato@epata.com</p>
+        <p><i class="fas fa-phone"></i> Telefone: +244 923 724 469</p>
+    </section>
+    <section class="map-container">
+        <iframe src="https://www.google.com/maps/embed?..."></iframe>
+    </section>
+    
+    
+
+    <a href="https://wa.me/244923724469?text=Olá, gostaria de mais informações!" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp
+    </a>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Seção de Redes Sociais -->
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <a href="https://facebook.com/epata" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/epata" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/epata" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/244923724469" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+    
+            <!-- Seção de Inscrição para Formação -->
+            <div class="footer-formacao">
+                <h3>Inscreva-se na nossa Formação</h3>
+                <p>Receba informações sobre nossos cursos diretamente no seu e-mail.</p>
+                <form id="form-inscricao">
+                    <input type="text" id="nome" placeholder="Seu Nome" required>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <button type="submit">Inscrever-se</button>
+                </form>
+            </div>
+    
+            <!-- Links Úteis -->
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 EPATA - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById("form-inscricao").addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        Swal.fire({
+            title: "Inscrição Confirmada!",
+            text: "Você receberá nossas atualizações em breve.",
+            icon: "success",
+            confirmButtonText: "OK"
+        });
+
+        document.getElementById("nome").value = "";
+        document.getElementById("email").value = "";
+    });
+</script>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        Swal.fire("Sucesso!", "Sua mensagem foi enviada!", "success");
+    });
+</script>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
